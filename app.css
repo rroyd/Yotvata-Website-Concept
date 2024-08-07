@@ -1,0 +1,24 @@
+#app .bg-primary {
+    background-color: rgb(255, 166, 32) !important;
+}
+
+#app .shoko {
+    width: 100%;
+}
+
+#app .text-primary {
+    color: rgb(255, 166, 32) !important;
+}
+
+#app .border-primary   {
+border-color: rgb(200, 120, 0) !important;
+}
+
+#app {
+    padding: 0 !important;
+}
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
