@@ -17,61 +17,275 @@
     ></script>
     <title>YOTVATA</title>
   </head>
-  <body id="app">
-      <div class="navbar navbar-dark navbar-expand bg-primary overflow-x-hidden" id="navbar">
-        <a
-          href="#"
-          class="navbar-brand text-center align-items-center"
-          ><img src="logo.png" alt="" class="mx-5 my-2" style="width: 5rem" />
-          <button class="navbar-toggler"></button>
-        <div class="navbar-nav text-uppercase fs-3 gap-3">
-          <a href="" class="nav-item nav-link active">Home</a>
-          <a href="" class="nav-item nav-link">Our Drinks</a>
-          <a href="" class="nav-item nav-link">Order</a>
-        </div>
-    </div>
-     </div>
-    <div class="container-fluid text-primary p-0 bg-danger d-flex flex-column">
-      <div class="row">
-        <div class="col-12 col-lg-6 text-center d-flex flex=row flex-md-col align-items-center">
-          <div class="col">
-            <h1 class="fw-light display-4">Yotvata/Tasty</h1>
-            <h1 class="fw-light display-4">Yotvata/Tasty</h1>
-            <h1 class="fw-light display-4">Yotvata/Tasty</h1>
-            <h1 class="fw-light display-4">Yotvata/Tasty</h1>
-            <h1 class="fw-light display-4">Yotvata/Tasty</h1>
+  <body id="app" data-bs-target="#navbar" data-bs-spy="scroll">
+    <div
+      class="container-fluid p-0 navbar navbar-dark navbar-expand-lg bg-primary fixed-top"
+      id="navbar"
+    >
+      <div class="col-4 col-md-1 col-xs-1">
+        <img src="logo.png" alt="" class="mx-5 my-2" style="width: 4rem" />
+      </div>
+
+      <div class="col-0 col-sm-3 col-xxs-1 col-md-5 col-sm-3 d-lg-none"></div>
+      <button
+        class="navbar-toggler col fs-1 mx-5 border border-0"
+        data-bs-toggle="collapse"
+        data-bs-target="#navs"
+        aria-expanded="false"
+        aria-controls="navbarScroll"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="col d-flex justify-content-end justify-content-lg-start">
+        <div>
+          <div class="navbar-collapse collapse mb-lg-0 mb-4" id="navs">
+            <ul
+              class="navbar-nav me-auto navbar-nav-scroll text-uppercase fs-4 px-5 gap-5 justify-content-end"
+            >
+              <li class="nav-item">
+                <a href="#section1" class="nav-link active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="#section2" class="nav-link">Our Drinks</a>
+              </li>
+              <li class="nav-item">
+                <a href="#section3" class="nav-link">Order</a>
+              </li>
+              <li class="nav-item">
+                <a href="#section4" class="nav-link">Contact</a>
+              </li>
+            </ul>
           </div>
-        </div>
-        <div class="col-12 col-lg-6 p-0">
-          <img src="shoko.jpg" class="shoko" />
         </div>
       </div>
-    <div class="row d-flex flex-column-reverse flex-lg-row">
-        <div class="col-12 col-lg-6 p-0">
-          <img src="yotvataplace.jpg" class="object-fit-cover"/>
-        </div>
-        <div
-          class="col-12 col-lg-6 px-0 text-center bg-white text-primary d-flex flex-col justify-content-center align-items-center"
-        >
-          <div class="row w-50 py-5 py-lg-0">
-            <h1 class="display-4 fw-medium">
-              <span class="text-danger">YOTVATA</span> FOR LIFE
-            </h1>
-            <hr class="border border-primary border-2" />
-            <p class = "text-black">
-              The taste of Yotvata comes to you all the way from the kibbutz in
-              the heart of the desert. The clean air, the peace and tranquility,
-              the breathtaking scenery and the vast open spaces that embrace you
-              with every sip and taste, bring that magical place all the way to
-              you.
-            </p>
+    </div>
+
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#navs"
+      data-bs-smooth-scroll="true"
+    >
+      <div
+        class="container-fluid text-primary p-0 bg-danger d-flex flex-column"
+      >
+        <div class="row" id="section1">
+          <div
+            class="col-12 col-lg-6 text-center d-flex p-5 p-lg-0 flex-row flex-md-col align-items-center"
+          >
+            <div class="col">
+              <h1 class="fw-light display-4">
+                Yotvata<span class="text-success">/</span
+                ><span class="bg-success p-0"> Tasty </span>
+              </h1>
+              <h1 class="fw-light display-4">
+                Yotvata<span class="text-success">/</span
+                ><span class="bg-success"> Tasty </span>
+              </h1>
+              <h1 class="fw-light display-4">
+                Yotvata<span class="text-success">/</span
+                ><span class="bg-success"> Tasty </span>
+              </h1>
+              <h1 class="fw-light display-4">
+                Yotvata<span class="text-success">/</span
+                ><span class="bg-success"> Tasty </span>
+              </h1>
+              <h1 class="fw-light display-4">
+                Yotvata<span class="text-success">/</span
+                ><span class="bg-success"> Tasty </span>
+              </h1>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 p-0">
+            <img src="shoko.jpg" class="shoko" />
           </div>
         </div>
-    </div>
+        <div class="row d-flex flex-column-reverse flex-lg-row" id="section2">
+          <div class="col-12 col-lg-6 p-0">
+            <img src="yotvataplace.jpg" class="object-fit-cover" />
+          </div>
+          <div
+            class="col-12 col-lg-6 px-0 text-center bg-white text-primary d-flex flex-col justify-content-center align-items-center"
+          >
+            <div class="row w-50 py-5 py-lg-0">
+              <h1 class="display-4 fw-medium">
+                <span class="text-danger">YOTVATA</span> FOR
+                <span class="text-success">LIFE</span>
+              </h1>
+              <hr class="border border-primary border-2" />
+              <p class="text-black">
+                The taste of Yotvata comes to you all the way from the kibbutz
+                in the heart of the desert. The clean air, the peace and
+                tranquility, the breathtaking scenery and the vast open spaces
+                that embrace you with every sip and taste, bring that magical
+                place all the way to you.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
 
-    <div class="container"></div>
+      <div class="row my-5">
+        <div
+          class="d-flex flex-column justify-content-center gap-5"
+          id="section3"
+        >
+          <div class="row">
+            <h1
+              class="col col-lg-6 d-flex gap-3 justify-content-center display-4 fw-medium"
+            >
+              <span class="text-danger fw-light">OUR</span>
+              <span class="fw-bold">PRODUCTS</span>
+            </h1>
+          </div>
+          <div
+            class="row d-flex justify-content-center align-items-center gap-5 bg-success py-5"
+          >
+            <div
+              class="card col-6 col-xxl-3 col-xl-6 text-center rounded-4 p-2"
+            >
+              <img class="card-img-top" src="bottle2.jpg" alt="Title" />
+              <div class="card-body">
+                <h4 class="card-title fs-3">Ice Coffee</h4>
+                <hr />
+                <p class="card-text">
+                  Iced coffee milk is a refreshing blend of bold coffee and
+                  creamy milk, perfect for a cool caffeine boost. Enjoy it as a
+                  revitalizing pick-me-up or a delicious treat on a hot day.
+                </p>
+              </div>
+            </div>
+            <div
+              class="card col-6 col-xxl-4 col-xl-6 text-center rounded-4 p-2"
+            >
+              <img
+                class="card-img-top img-fluid"
+                src="bottle1.jpg"
+                alt="Title"
+              />
+              <div class="card-body">
+                <h4
+                  class="card-title fs-3 d-flex justify-content-center align-items-center gap-3 text-center"
+                >
+                  Chocolate Milk
+                  <span class="badge bg-primary rounded-2 d-flex">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-star-fill"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                      />
+                    </svg>
+                  </span>
+                </h4>
+                <hr />
+                <p class="card-text">
+                  Chocolate milk is a classic favorite, combining the richness
+                  of chocolate with the creaminess of milk. This delicious treat
+                  is perfect for a quick energy boost or a sweet indulgence
+                  anytime.
+                </p>
+              </div>
+            </div>
+            <div
+              class="card col-6 col-xxl-3 col-xl-6 text-center rounded-4 p-2"
+            >
+              <img class="card-img-top" src="bottle3.jpg" alt="Title" />
+              <div class="card-body">
+                <h4 class="card-title fs-3">Pistachio</h4>
+                <hr />
+                <p class="card-text">
+                  Pistachio milk is a creamy, nutty alternative to dairy, rich
+                  in healthy fats, protein, and antioxidants. Its unique taste
+                  and subtle sweetness make it perfect for smoothies, coffee, or
+                  enjoyed on its own.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="container-fluid d-flex my-4 flex-column justify-content-center gap-1"
+        id="section4"
+      >
+        <div class="row">
+          <div class="col d-flex flex-column text-center">
+            <h1 class="text-center col">
+              CONTACT <span class="fw-light text-primary">US</span>
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <p class="fs-5 col px-5 px-lg-0 fw-light text-center">
+            For any inquiries or support, please complete the form below, and
+            our team will get back to you as soon as possible.
+          </p>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-8 col-lg-6 col-xxl-5 d-flex flex-column gap-3">
+            <div>
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                id="name"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  name=""
+                  id=""
+                  aria-describedby="emailHelpId"
+                />
+              </div>
+            </div>
+
+            <div>
+              <div class="mb-3">
+                <label for="" class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name=""
+                  id=""
+                  aria-describedby="helpId"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div>
+              <div class="mb-3">
+                <label for="" class="form-label">Description</label>
+                <textarea
+                  class="form-control"
+                  name=""
+                  id=""
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-primary w-50 w-lg-25 align-self-center"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-   
   </body>
 </html>
