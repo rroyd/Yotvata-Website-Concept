@@ -15,43 +15,67 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $('[data-bs-toggle="tooltip"]').tooltip();
+        $(document).scroll(function () {
+          var $nav = $("#navbar");
+          var $button = $("#btn-collpase");
+
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
     <title>YOTVATA</title>
   </head>
-  <body id="app" data-bs-target="#navbar" data-bs-spy="scroll">
+  <body id="app">
     <div
-      class="container-fluid p-0 navbar navbar-dark navbar-expand-lg bg-primary fixed-top"
+      class="container-fluid p-0 navbar navbar-dark navbar-expand-lg gap-5 bg-none fixed-top"
       id="navbar"
     >
-      <div class="col-4 col-md-1 col-xs-1">
-        <img src="logo.png" alt="" class="mx-5 my-2" style="width: 4rem" />
+      <div class="col-2 col-sm-3 col-md-1">
+        <img
+          src="logo.png"
+          alt=""
+          class="mx-sm-5 mx-5 my-2"
+          style="width: 4rem"
+        />
       </div>
 
-      <div class="col-0 col-sm-3 col-xxs-1 col-md-5 col-sm-3 d-lg-none"></div>
+      <div class="col-2 col-sm-3 col-md-5 col-sm-3 d-lg-none"></div>
       <button
-        class="navbar-toggler col fs-1 mx-5 border border-0"
+        class="navbar-toggler col fs-1 mx-0 mx-sm-5 border border-0"
         data-bs-toggle="collapse"
         data-bs-target="#navs"
         aria-expanded="false"
         aria-controls="navbarScroll"
+        id="btn-collpase"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="col d-flex justify-content-end justify-content-lg-start">
+      <div
+        class="col d-flex justify-content-end flex-column flex-lg-row justify-content-lg-start"
+      >
         <div>
           <div class="navbar-collapse collapse mb-lg-0 mb-4" id="navs">
             <ul
               class="navbar-nav me-auto navbar-nav-scroll text-uppercase fs-4 px-5 gap-5 justify-content-end"
             >
-              <li class="nav-item">
-                <a href="#section1" class="nav-link active">Home</a>
+              <li class="nav-item fs-2">
+                <a href="#section1" class="nav-link">Home</a>
               </li>
-              <li class="nav-item">
-                <a href="#section2" class="nav-link">Our Drinks</a>
+              <li class="nav-item fs-2">
+                <a href="#section2" class="nav-link">About</a>
               </li>
-              <li class="nav-item">
-                <a href="#section3" class="nav-link">Order</a>
+              <li class="nav-item fs-2">
+                <a href="#section3" class="nav-link">Our Drinks</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item fs-2">
                 <a href="#section4" class="nav-link">Contact</a>
               </li>
             </ul>
@@ -64,13 +88,14 @@
       data-bs-spy="scroll"
       data-bs-target="#navs"
       data-bs-smooth-scroll="true"
+      class="d-flex flex-column gap-5"
     >
       <div
         class="container-fluid text-primary p-0 bg-danger d-flex flex-column"
       >
         <div class="row" id="section1">
           <div
-            class="col-12 col-lg-6 text-center d-flex p-5 p-lg-0 flex-row flex-md-col align-items-center"
+            class="col-12 col-lg-6 text-center d-flex p-5 p-lg-0 flex-row align-items-center"
           >
             <div class="col">
               <h1 class="fw-light display-4">
@@ -99,27 +124,28 @@
             <img src="shoko.jpg" class="shoko" />
           </div>
         </div>
-        <div class="row d-flex flex-column-reverse flex-lg-row" id="section2">
-          <div class="col-12 col-lg-6 p-0">
-            <img src="yotvataplace.jpg" class="object-fit-cover" />
-          </div>
-          <div
-            class="col-12 col-lg-6 px-0 text-center bg-white text-primary d-flex flex-col justify-content-center align-items-center"
-          >
-            <div class="row w-50 py-5 py-lg-0">
-              <h1 class="display-4 fw-medium">
-                <span class="text-danger">YOTVATA</span> FOR
-                <span class="text-success">LIFE</span>
-              </h1>
-              <hr class="border border-primary border-2" />
-              <p class="text-black">
-                The taste of Yotvata comes to you all the way from the kibbutz
-                in the heart of the desert. The clean air, the peace and
-                tranquility, the breathtaking scenery and the vast open spaces
-                that embrace you with every sip and taste, bring that magical
-                place all the way to you.
-              </p>
-            </div>
+      </div>
+
+      <div class="row d-flex flex-column-reverse flex-lg-row" id="section2">
+        <div class="col-12 col-lg-6 p-0">
+          <img src="yotvataplace.jpg" class="object-fit-cover" id="dimona" />
+        </div>
+        <div
+          class="col-12 col-lg-6 px-0 text-center bg-white text-primary d-flex flex-col justify-content-center align-items-center"
+        >
+          <div class="row w-50 py-5 py-lg-0">
+            <h1 class="display-4 fw-medium">
+              <span class="text-danger">YOTVATA</span> FOR
+              <span class="text-success">LIFE</span>
+            </h1>
+            <hr class="border border-primary border-2" />
+            <p class="text-black">
+              The taste of Yotvata comes to you all the way from the kibbutz in
+              the heart of the desert. The clean air, the peace and tranquility,
+              the breathtaking scenery and the vast open spaces that embrace you
+              with every sip and taste, bring that magical place all the way to
+              you.
+            </p>
           </div>
         </div>
       </div>
@@ -286,6 +312,7 @@
           </div>
         </div>
       </div>
+      <footer class="bg-info d-flex flex-c"></footer>
     </div>
   </body>
 </html>
